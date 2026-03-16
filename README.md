@@ -78,9 +78,9 @@ top-10-movies-site/
 <br>
 
 <div align="center">
-  <img src="https://img.shields.io/badge/🤖_AI_Contribution-HTML_%26_CSS_Design-50FA7B?style=flat-square" alt="AI Note">
+  <img src="https://img.shields.io/badge/🤖_AI_Contribution-Project_HTML_%26_CSS-50FA7B?style=flat-square" alt="AI Note">
   <br>
-  <samp style="font-size: 12px; color: #6272a4;">This README's visual architecture and custom styling were co-authored with AI to ensure a high-quality UI/UX presentation.</samp>
+  <samp style="font-size: 12px; color: #6272a4;">The HTML and CSS templates within this project were co-authored with AI.</samp>
 </div>
 
 <br>
