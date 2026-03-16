@@ -19,13 +19,13 @@
   <img src="https://placehold.co/1000x2/C3B550/C3B550.png" width="100%" height="2" alt="Yellow Divider"/>
 </h3>
 
-A fully functional web application that allows users to curate and rank their favorite movies. The app connects to the TMDB API to fetch movie data, stores user ratings and reviews in a local database, and dynamically sorts the list based on the user's score.
+A dynamic web application that serves as a personal cinema diary. It allows users to search for movies via the TMDB API, add them to a local SQLite database, and provide custom ratings and reviews. The application automatically handles the ranking logic, ensuring the highest-rated movie always holds the top position.
 
-**Key Features:**
-* **🔍 Movie Search:** Real-time search functionality using the TMDB API to find and add movies.
-* **✍️ CRUD Operations:** Full ability to Add, Edit (rating/review), and Delete entries from the database.
-* **📊 Automatic Ranking:** Movies are automatically ranked and reordered based on the numerical rating provided.
-* **🎨 Modern UI:** Clean interface built with Bootstrap and Jinja2 templates.
+**Technical Logic (Verified):**
+* **🎬 TMDB API Workflow:** Implements a two-step API process: searching for titles and then fetching specific movie details (poster, description, year) by ID for database entry.
+* **📊 Automated Ranking System:** Features a backend logic that sorts the entire movie collection by rating and assigns a rank dynamically whenever a score is updated.
+* **✍️ Full CRUD Capability:** Users can Create (add movie), Read (view list), Update (edit review/rating), and Delete entries, with immediate database synchronization.
+* **🧬 Jinja2 Templating:** Uses server-side rendering to inject database content into HTML, maintaining a consistent UI across different movie entries.
 
 <br>
 
@@ -36,16 +36,11 @@ A fully functional web application that allows users to curate and rank their fa
 
 ```text
 top-10-movies-site/
-├── main.py                     # Flask application logic & Routes
-├── forms.py                    # WTForms for Rating & Add functionality
-├── movies.db                   # SQLite Database storage
-├── templates/                  # HTML Templates (Jinja2)
-│   ├── index.html
-│   ├── add.html
-│   └── edit.html
-└── static/                     # CSS & Styling assets"center">
-  <img src="https://placehold.co/1000x3/FE428E/FE428E.png" width="100%" height="3" alt="Pink Divider"/>
-</div>
+├── main.py                     # Flask routes, API logic & Database models
+├── forms.py                    # WTForms definitions for secure input
+├── movies.db                   # SQLite storage for movie records
+├── templates/                  # Jinja2 HTML templates (index, edit, add)
+└── static/                     # Custom CSS and UI styling
 ```
 <h3>
   🧠 Code Review & Complexity<br>
@@ -60,27 +55,27 @@ top-10-movies-site/
 
 > **📊 SYSTEM COMPLEXITY RADAR**
 >
-> 🟩🟩🟩🟩🟩🟩🟩🟩⬛⬛ **80%** | **Database Management (SQLAlchemy)**<br>
-> 🟨🟨🟨🟨🟨🟨🟨🟨⬛⬛ **80%** | **API Integration (TMDB)**<br>
-> 🟦🟦🟦🟦🟦🟦🟦⬛⬛⬛ **70%** | **Frontend Logic (Jinja2/Flask)**<br>
+> 🟩🟩🟩🟩🟩🟩🟩🟩⬛⬛ **80%** | **ORM Integration (SQLAlchemy)**<br>
+> 🟨🟨🟨🟨🟨🟨🟨🟨⬛⬛ **80%** | **API Search & Fetch Logic**<br>
+> 🟦🟦🟦🟦🟦🟦🟦⬛⬛⬛ **70%** | **Dynamic Sorting Algorithm**<br>
 > 🟪🟪🟪🟪🟪🟪⬛⬛⬛⬛ **60%** | **Form Validation (WTForms)**
 
 <br>
 
 **🟢 High-Impact Wins:**
-* **API Integration:** Excellent handling of external requests and parsing JSON data into the app.
-* **Database Logic:** Implementation of SQLAlchemy for clean, Pythonic database interactions.
+* **Data Flow:** Smooth transition of data from an external API through a Flask form and into a persistent SQLite database.
+* **SQLAlchemy Mastery:** Using ORM (Object-Relational Mapping) to keep database queries clean and Pythonic.
 
-**🔧 Key Recommendations:**
-* **Security:** Move the TMDB API Key into an environment variable (`.env`) for safety.
-* **UI/UX:** Add a loading spinner during API calls to improve user experience.
+**🔧 Technical Debt:**
+* **API Security:** The TMDB API Key is currently embedded in the code. (Pro-tip: Explain that you would move this to an `.env` file for a production environment).
+* **Search Refinement:** The search results could be improved by adding "Pagination" if the API returns more than 10 results at once.
 
 <br>
 
 <div align="center">
   <img src="https://img.shields.io/badge/🤖_AI_Contribution-Project_HTML_%26_CSS-50FA7B?style=flat-square" alt="AI Note">
   <br>
-  <samp style="font-size: 12px; color: #6272a4;">The HTML and CSS templates within this project were co-authored with AI.</samp>
+  <samp style="font-size: 12px; color: #6272a4;">Any custom HTML/CSS used in this project's templates was co-authored with AI.</samp>
 </div>
 
 <br>
