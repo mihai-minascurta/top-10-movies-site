@@ -43,9 +43,10 @@ top-10-movies-site/
 │   ├── index.html
 │   ├── add.html
 │   └── edit.html
-└── static/                     # CSS & Styling assets
+└── static/                     # CSS & Styling assets"center">
+  <img src="https://placehold.co/1000x3/FE428E/FE428E.png" width="100%" height="3" alt="Pink Divider"/>
+</div>
 ```
-
 <h3>
   🧠 Code Review & Complexity<br>
   <img src="https://placehold.co/1000x2/C3B550/C3B550.png" width="100%" height="2" alt="Yellow Divider"/>
@@ -70,9 +71,17 @@ top-10-movies-site/
 * **API Integration:** Excellent handling of external requests and parsing JSON data into the app.
 * **Database Logic:** Implementation of SQLAlchemy for clean, Pythonic database interactions.
 
-**🔧 Key Recommendations (Refactoring):**
-* **Security:** Move the TMDB API Key into an environment variable (`.env`) to keep it off the public repository.
-* **UI/UX:** Add a "loading" state or a spinner when searching for movies to improve the user experience during API calls.
+**🔧 Key Recommendations:**
+* **Security:** Move the TMDB API Key into an environment variable (`.env`) for safety.
+* **UI/UX:** Add a loading spinner during API calls to improve user experience.
+
+<br>
+
+<div align="center">
+  <img src="https://img.shields.io/badge/🤖_AI_Contribution-HTML_%26_CSS_Design-50FA7B?style=flat-square" alt="AI Note">
+  <br>
+  <samp style="font-size: 12px; color: #6272a4;">This README's visual architecture and custom styling were co-authored with AI to ensure a high-quality UI/UX presentation.</samp>
+</div>
 
 <br>
 
